@@ -10,4 +10,23 @@ public class Temperature
     private double degreesFahrenheit; // Fahrenheit temperature
     private double degreesCelsius; // Celsius temperature
     private double degreesKelvin; // Kelvin temperature
+
+    /**
+     * getDegreesCelsius retrieves the Celsius temperature value
+     * 
+     * @return a double value containing the Celsius temperature
+     */
+    public double getDegreesCelsius() {
+        return degreesCelsius;
+    }
+
+    /**
+     * getDegreesKelvin retrieves the Kelvin temperature value
+     * 
+     * @return a double value containing the Kelvin temperature
+     */
+    public double getDegreesKelvin() {
+        return degreesKelvin;
+    }
 }
+
