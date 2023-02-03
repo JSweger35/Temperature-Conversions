@@ -1,4 +1,13 @@
 #BlueJ class context
 comment0.target=Temperature
 comment0.text=\n\ Write\ a\ description\ of\ class\ Temperature\ here.\n\ Temperature\ stores\ a\ temperature\ in\ Fahrenheit,\ Celsius,\ and\ Kelvin\ scales.\n\ @author\ Jake\ Sweger\n\ @version\ Version\ 1.0\n
-numComments=1
+comment1.params=
+comment1.target=double\ getDegreesCelsius()
+comment1.text=\n\ getDegreesCelsius\ retrieves\ the\ Celsius\ temperature\ value\n\ \n\ @return\ a\ double\ value\ containing\ the\ Celsius\ temperature\n
+comment2.params=
+comment2.target=double\ getDegreesKelvin()
+comment2.text=\n\ getDegreesKelvin\ retrieves\ the\ Kelvin\ temperature\ value\n\ \n\ @return\ a\ double\ value\ containing\ the\ Kelvin\ temperature\n
+comment3.params=degrees
+comment3.target=void\ setDegreesFahrenheit(double)
+comment3.text=\n\ The\ setDegreesFahrenheit\ method\ sets\ the\ Fahrenheit\ temperature\n\ \n\ @param\ degrees\ The\ Fahrenheit\ value\ to\ store\ \n
+numComments=4

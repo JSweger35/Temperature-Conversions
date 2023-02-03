@@ -28,5 +28,14 @@ public class Temperature
     public double getDegreesKelvin() {
         return degreesKelvin;
     }
+
+    /**
+     * The setDegreesFahrenheit method sets the Fahrenheit temperature
+     * 
+     * @param degrees The Fahrenheit value to store 
+     */
+    public void setDegreesFahrenheit(double degrees) {
+        degreesFahrenheit = degrees; // set Fahrenheit value
+    }
 }
 
