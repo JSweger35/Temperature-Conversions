@@ -36,6 +36,8 @@ public class Temperature
      */
     public void setDegreesFahrenheit(double degrees) {
         degreesFahrenheit = degrees; // set Fahrenheit value
+        degreesCelsius = (degreesFahrenheit - 32.0) * 5.0 / 9.0; // set Celsius
+        degreesKelvin = degreesCelsius + 273.15; // set Kelvin value
     }
 }
 
