@@ -12,24 +12,19 @@ public class Temperature
     private double degreesKelvin; // Kelvin temperature
 
     /**
-     * Default constructor for Temperature sets the default
-     * value of the Temperature object to 0.0 degrees
-     * Fahrenheit with Celsius and Kelvin equivalents
-     */
-    public Temperature() {
-        this(0.0);
-    }
-
-    /**
-     * This constructor for Temperature sets the Fahrenheit
-     * value to the value from degrees, then calculates
-     * equivalent Celsius and Kelvin values using the method
-     * setDegreesFahrenheit()
+     * This constructor for Temperature sets the temperature
+     * values to the value in degrees, based on type
      * 
+     * @param type temperature scale to use
      * @param degrees degrees Fahrenheit
      */
-    public Temperature(double degrees) {
-        setDegreesFahrenheit(degrees);
+    public Temperature(String type, double degrees) {
+        if (type.equalsIgnoreCase("C"))
+            setDegreesCelsius(degrees);
+        else if (type.equalsIgnoreCase("F"))
+            setDegreesFahrenheit(degrees);
+        else if (type.equalsIgnoreCase("K"))
+            setDegreesKelvin(degrees);
     }
 
     /**

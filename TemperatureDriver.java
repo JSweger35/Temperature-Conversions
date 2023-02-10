@@ -13,9 +13,9 @@ public class TemperatureDriver {
     public static void main(String[] args) {
         double inputTemperature = 0.0;
         Scanner keyboard = new Scanner(System.in); 
-        Temperature t1 = new Temperature();
+        Temperature t1;
         String temperatureType= "";
-
+        t1 = new Temperature(temperatureType, inputTemperature);
         System.out.print("Enter a temperature type (C for Celsius, " +
             "F for Fahrenheit, K for Kelvin): ");
         temperatureType = keyboard.next();
@@ -26,12 +26,32 @@ public class TemperatureDriver {
             System.out.println("You entered " + inputTemperature + 
                 " degrees Fahrenheit"); 
 
-            t1.setDegreesFahrenheit(inputTemperature);
+            //t1.setDegreesFahrenheit(inputTemperature);
             System.out.println("which is " + t1.getDegreesCelsius() + 
                 " degrees Celsius"); 
             System.out.println("and " + t1.getDegreesKelvin() + 
                 " degrees Kelvin.");
             System.out.print("Enter another Fahrenheit temperature: ");
+        }
+
+        if (temperatureType.equalsIgnoreCase("C")) {
+            System.out.println("You entered " + inputTemperature + 
+                " degrees Celsius");
+            //t1.setDegreesCelsius(inputTemperature);
+            System.out.println("which is " + t1.getDegreesFahrenheit() + 
+                " degrees Fahrenheit"); 
+            System.out.println("and " + t1.getDegreesKelvin() + 
+                " degrees Kelvin.");
+        }
+
+        if (temperatureType.equalsIgnoreCase("K")) {
+            System.out.println("You entered " + inputTemperature + 
+                " degrees Kelvin");
+            //t1.setDegreesKelvin(inputTemperature);
+            System.out.println("which is " + t1.getDegreesCelsius() + 
+                " degrees Celsius"); 
+            System.out.println("and " + t1.getDegreesFahrenheit() + 
+                " degrees Fahrenheit.");
         }
     }
 }
