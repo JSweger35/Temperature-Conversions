@@ -3,7 +3,7 @@ import java.util.Scanner;
 * TemperatureDriver runs and tests the Temperature class.
 * 
 * @author Jake Sweger
-* @version 1.0
+* @version 2.0
 */
 public class TemperatureDriver {
     /**

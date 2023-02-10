@@ -3,7 +3,7 @@
  * Write a description of class Temperature here.
  * Temperature stores a temperature in Fahrenheit, Celsius, and Kelvin scales.
  * @author Jake Sweger
- * @version Version 1.0
+ * @version Version 2.0
  */
 public class Temperature
 {

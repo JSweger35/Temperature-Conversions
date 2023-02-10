@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Temperature
-comment0.text=\n\ Write\ a\ description\ of\ class\ Temperature\ here.\n\ Temperature\ stores\ a\ temperature\ in\ Fahrenheit,\ Celsius,\ and\ Kelvin\ scales.\n\ @author\ Jake\ Sweger\n\ @version\ Version\ 1.0\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ Temperature\ here.\n\ Temperature\ stores\ a\ temperature\ in\ Fahrenheit,\ Celsius,\ and\ Kelvin\ scales.\n\ @author\ Jake\ Sweger\n\ @version\ Version\ 2.0\n
 comment1.params=
 comment1.target=Temperature()
 comment1.text=\n\ Default\ constructor\ for\ Temperature\ sets\ the\ default\n\ value\ of\ the\ Temperature\ object\ to\ 0.0\ degrees\n\ Fahrenheit\ with\ Celsius\ and\ Kelvin\ equivalents\n
