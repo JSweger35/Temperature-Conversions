@@ -31,7 +31,6 @@ public class TemperatureDriver {
                 " degrees Celsius"); 
             System.out.println("and " + t1.getDegreesKelvin() + 
                 " degrees Kelvin.");
-            System.out.print("Enter another Fahrenheit temperature: ");
         }
 
         else if (temperatureType.equalsIgnoreCase("C")) {
