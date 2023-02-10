@@ -22,7 +22,7 @@ public class TemperatureDriver {
         System.out.print("Enter a temperature: "); 
         inputTemperature = keyboard.nextDouble(); 
 
-        if (temperatureType.equals("f")){
+        if (temperatureType.equals("F")){
             System.out.println("You entered " + inputTemperature + 
                 " degrees Fahrenheit"); 
 
@@ -52,6 +52,11 @@ public class TemperatureDriver {
                 " degrees Celsius"); 
             System.out.println("and " + t1.getDegreesFahrenheit() + 
                 " degrees Fahrenheit.");
+        }
+        
+        else {
+            System.out.println("You entered an invalid temperature type: " + temperatureType);
+            System.out.println("It must be \"C\", \"F\", or \"K\".  Please try the program again.");
         }
     }
 }
