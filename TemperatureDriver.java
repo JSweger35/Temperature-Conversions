@@ -26,7 +26,7 @@ public class TemperatureDriver {
             System.out.println("You entered " + inputTemperature + 
                 " degrees Fahrenheit"); 
 
-            //t1.setDegreesFahrenheit(inputTemperature);
+            t1.setDegreesFahrenheit(inputTemperature);
             System.out.println("which is " + t1.getDegreesCelsius() + 
                 " degrees Celsius"); 
             System.out.println("and " + t1.getDegreesKelvin() + 
@@ -37,7 +37,7 @@ public class TemperatureDriver {
         if (temperatureType.equalsIgnoreCase("C")) {
             System.out.println("You entered " + inputTemperature + 
                 " degrees Celsius");
-            //t1.setDegreesCelsius(inputTemperature);
+            t1.setDegreesCelsius(inputTemperature);
             System.out.println("which is " + t1.getDegreesFahrenheit() + 
                 " degrees Fahrenheit"); 
             System.out.println("and " + t1.getDegreesKelvin() + 
@@ -47,7 +47,7 @@ public class TemperatureDriver {
         if (temperatureType.equalsIgnoreCase("K")) {
             System.out.println("You entered " + inputTemperature + 
                 " degrees Kelvin");
-            //t1.setDegreesKelvin(inputTemperature);
+            t1.setDegreesKelvin(inputTemperature);
             System.out.println("which is " + t1.getDegreesCelsius() + 
                 " degrees Celsius"); 
             System.out.println("and " + t1.getDegreesFahrenheit() + 
