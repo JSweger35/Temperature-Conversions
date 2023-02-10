@@ -15,6 +15,7 @@ public class TemperatureDriver {
         Scanner keyboard = new Scanner(System.in); 
         Temperature t1;
         String temperatureType= "";
+        boolean moreTemperatures = true; //more tempteratures to convert
         t1 = new Temperature(temperatureType, inputTemperature);
         System.out.print("Enter a temperature type (C for Celsius, " +
             "F for Fahrenheit, K for Kelvin): ");
