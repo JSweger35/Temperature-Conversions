@@ -43,6 +43,18 @@ public class Temperature
         degreesKelvin = degreesCelsius + 273.15; // set Kelvin value
     }
 
+    public void setDegreesCelsius(double degrees) {
+        degreesCelsius = degrees;
+        degreesFahrenheit = degreesCelsius * 9.0 / 5.0 + 32.0;
+        degreesKelvin = degreesCelsius + 273.15;
+    }
+
+    public void setDegreesKelvin(double degrees) {
+        degreesKelvin = degrees;
+        degreesCelsius = degreesKelvin - 273.15;
+        degreesFahrenheit = degreesCelsius * 9.0 / 5.0 + 32.0;
+    }
+
     /**
      * getDegreesCelsius retrieves the Celsius temperature value
      * 
