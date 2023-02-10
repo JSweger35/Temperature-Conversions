@@ -64,6 +64,11 @@ public class TemperatureDriver {
                 System.out.println("You entered an invalid temperature type: " + temperatureType);
                 System.out.println("It must be \"C\", \"F\", or \"K\".  Please try the program again.");
             }
+
+            if (temperatureType.equalsIgnoreCase("Q")) { // quit
+                moreTemperatures = false;
+                System.out.println("\nProgram ended.");
+            }
         }
     }
 }
