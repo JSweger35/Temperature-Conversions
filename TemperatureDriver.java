@@ -22,7 +22,7 @@ public class TemperatureDriver {
         System.out.print("Enter a temperature: "); 
         inputTemperature = keyboard.nextDouble(); 
 
-        if (temperatureType.equals("F")){
+        if (temperatureType.equalsIgnoreCase("F")){
             System.out.println("You entered " + inputTemperature + 
                 " degrees Fahrenheit"); 
 
