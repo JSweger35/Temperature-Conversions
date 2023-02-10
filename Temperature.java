@@ -19,7 +19,7 @@ public class Temperature
     public Temperature() {
         this(0.0);
     }
-    
+
     /**
      * This constructor for Temperature sets the Fahrenheit
      * value to the value from degrees, then calculates
@@ -42,7 +42,7 @@ public class Temperature
         degreesCelsius = (degreesFahrenheit - 32.0) * 5.0 / 9.0; // set Celsius
         degreesKelvin = degreesCelsius + 273.15; // set Kelvin value
     }
-    
+
     /**
      * getDegreesCelsius retrieves the Celsius temperature value
      * 
@@ -59,6 +59,15 @@ public class Temperature
      */
     public double getDegreesKelvin() {
         return degreesKelvin;
+    }
+
+    /**
+     * getDegreesFahrenheit retrieves the Fahrenheit temperature value
+     * 
+     * @return a double value containing the Fahrenheit temperature
+     */
+    public double getDegreesFahrenheit() {
+        return degreesFahrenheit;
     }
 }
 
