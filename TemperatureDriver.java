@@ -20,19 +20,15 @@ public class TemperatureDriver {
         System.out.print("Enter a temperature type (C for Celsius, " +
             "F for Fahrenheit, K for Kelvin): ");
         temperatureType = keyboard.next();
-        if (!(temperatureType.equalsIgnoreCase("F") || temperatureType.equalsIgnoreCase("C") || temperatureType.equalsIgnoreCase("K"))){
-            System.out.println("You entered an invalid temperature type: " + temperatureType);
-            System.out.println("It must be \"C\", \"F\", or \"K\".  Please try the program again.");
-        }
-        else{
-            System.out.print("Enter a temperature: "); 
-            inputTemperature = keyboard.nextDouble();
+        /*if (!(temperatureType.equalsIgnoreCase("F") || temperatureType.equalsIgnoreCase("C") || temperatureType.equalsIgnoreCase("K"))){
+        System.out.println("You entered an invalid temperature type: " + temperatureType);
+        System.out.println("It must be \"C\", \"F\", or \"K\".  Please try the program again.");
+        }*/
+        //else{
+        System.out.print("Enter a temperature: "); 
+        inputTemperature = keyboard.nextDouble();
 
-            /*if (!(temperatureType.equalsIgnoreCase("F") || temperatureType.equalsIgnoreCase("C") || temperatureType.equalsIgnoreCase("K"))){
-            System.out.println("You entered an invalid temperature type: " + temperatureType);
-            System.out.println("It must be \"C\", \"F\", or \"K\".  Please try the program again.");
-            }*/
-
+        while (moreTemperatures) {
             if (temperatureType.equalsIgnoreCase("F")){
                 System.out.println("You entered " + inputTemperature + 
                     " degrees Fahrenheit"); 
@@ -64,10 +60,10 @@ public class TemperatureDriver {
                     " degrees Fahrenheit.");
             }
 
-            /*else {
-            System.out.println("You entered an invalid temperature type: " + temperatureType);
-            System.out.println("It must be \"C\", \"F\", or \"K\".  Please try the program again.");
-            }*/
+            else{
+                System.out.println("You entered an invalid temperature type: " + temperatureType);
+                System.out.println("It must be \"C\", \"F\", or \"K\".  Please try the program again.");
+            }
         }
     }
 }
