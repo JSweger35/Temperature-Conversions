@@ -17,11 +17,14 @@ public class TemperatureDriver {
         String temperatureType = "";
         boolean moreTemperatures = true;
         boolean goodType = false;
+        boolean goodTemperature = false;
 
         while (moreTemperatures) {
+            // read the temp type
             System.out.print("Enter a temperature type (C=Celsius, " +
                 "F=Fahrenheit, K=Kelvin, Q=Quit): ");
             temperatureType = keyInput.next();
+            // check type
             goodType = false;
             while ( ! goodType) {
                 if (temperatureType.equalsIgnoreCase("Q") ||
@@ -31,6 +34,7 @@ public class TemperatureDriver {
                     goodType = true;
                 }
                 else {
+                    // generate error message
                     System.out.println("Invalid temperature type!");
                     System.out.println("The type must be C, F, K, or Q.");
                     System.out.print("Please enter the temperature type again: ");
@@ -42,8 +46,28 @@ public class TemperatureDriver {
                 System.out.println("\nProgram ended.");
             }
             else {
-                System.out.print("Enter a temperature: ");
-                inputTemperature = keyInput.nextDouble();
+                goodTemperature = false;
+                do {
+                    System.out.print("Enter a temperature: ");
+                    if (keyInput.hasNextDouble()) {
+                        inputTemperature = keyInput.nextDouble();
+                        if ((temperatureType.equalsIgnoreCase("C") && inputTemperature >= -273.15) ||
+                            (temperatureType.equalsIgnoreCase("F") && inputTemperature >= -459.67) ||
+                            (temperatureType.equalsIgnoreCase("K") && inputTemperature >= 0))
+                            goodTemperature = true;
+                        else {
+                            System.out.println("You entered an invalid temperature!");
+                            System.out.println("It must be greater than absolute zero.");
+                            System.out.println("Try again.");
+                        }
+                    }
+                    else {
+                        System.out.println("You entered an invalid temperature!");
+                        System.out.println("It must be a numeric value.");
+                        System.out.println("Try again.");
+                        keyInput.next();
+                    }
+                } while ( ! goodTemperature);
                 t1 = new Temperature(temperatureType, inputTemperature);
 
                 if (temperatureType.equalsIgnoreCase("F")) {
