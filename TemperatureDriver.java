@@ -24,6 +24,18 @@ public class TemperatureDriver {
             temperatureType = keyInput.next();
             goodType = false;
             while ( ! goodType) {
+                if (temperatureType.equalsIgnoreCase("Q") ||
+                temperatureType.equalsIgnoreCase("C") || 
+                temperatureType.equalsIgnoreCase("F") ||
+                temperatureType.equalsIgnoreCase("K")) {
+                    goodType = true;
+                }
+                else {
+                    System.out.println("Invalid temperature type!");
+                    System.out.println("The type must be C, F, K, or Q.");
+                    System.out.print("Please enter the temperature type again: ");
+                    temperatureType = keyInput.next();
+                }
             }
             if (temperatureType.equalsIgnoreCase("Q")) { // quit
                 moreTemperatures = false;
