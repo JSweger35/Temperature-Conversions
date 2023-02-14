@@ -16,11 +16,15 @@ public class TemperatureDriver {
         Temperature t1;
         String temperatureType = "";
         boolean moreTemperatures = true;
+        boolean goodType = false;
 
         while (moreTemperatures) {
             System.out.print("Enter a temperature type (C=Celsius, " +
                 "F=Fahrenheit, K=Kelvin, Q=Quit): ");
             temperatureType = keyInput.next();
+            goodType = false;
+            while ( ! goodType) {
+            }
             if (temperatureType.equalsIgnoreCase("Q")) { // quit
                 moreTemperatures = false;
                 System.out.println("\nProgram ended.");
