@@ -28,9 +28,7 @@ public class TemperatureDriver {
             goodType = false;
             while ( ! goodType) {
                 if (temperatureType.equalsIgnoreCase("Q") ||
-                temperatureType.equalsIgnoreCase("C") || 
-                temperatureType.equalsIgnoreCase("F") ||
-                temperatureType.equalsIgnoreCase("K")) {
+                Temperature.isTypeValid(temperatureType)) {
                     goodType = true;
                 }
                 else {
@@ -52,8 +50,8 @@ public class TemperatureDriver {
                     if (keyInput.hasNextDouble()) {
                         inputTemperature = keyInput.nextDouble();
                         if ((temperatureType.equalsIgnoreCase("C") && inputTemperature >= -273.15) ||
-                            (temperatureType.equalsIgnoreCase("F") && inputTemperature >= -459.67) ||
-                            (temperatureType.equalsIgnoreCase("K") && inputTemperature >= 0))
+                        (temperatureType.equalsIgnoreCase("F") && inputTemperature >= -459.67) ||
+                        (temperatureType.equalsIgnoreCase("K") && inputTemperature >= 0))
                             goodTemperature = true;
                         else {
                             System.out.println("You entered an invalid temperature!");
