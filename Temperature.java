@@ -20,6 +20,15 @@ public class Temperature
             return false;
     }
 
+    public static boolean isTemperatureValid(String temperatureType, double temperature) {
+        if ((temperatureType.equalsIgnoreCase("C") && temperature >= -273.15) ||
+        (temperatureType.equalsIgnoreCase("F") && temperature >= -459.67) ||
+        (temperatureType.equalsIgnoreCase("K") && temperature >= 0.0))
+            return true;
+        else
+            return false;
+    }
+
     /**
      * This constructor for Temperature sets the temperature
      * values to the value in degrees, based on type

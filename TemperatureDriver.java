@@ -49,9 +49,7 @@ public class TemperatureDriver {
                     System.out.print("Enter a temperature: ");
                     if (keyInput.hasNextDouble()) {
                         inputTemperature = keyInput.nextDouble();
-                        if ((temperatureType.equalsIgnoreCase("C") && inputTemperature >= -273.15) ||
-                        (temperatureType.equalsIgnoreCase("F") && inputTemperature >= -459.67) ||
-                        (temperatureType.equalsIgnoreCase("K") && inputTemperature >= 0))
+                        if (Temperature.isTemperatureValid(temperatureType, inputTemperature))
                             goodTemperature = true;
                         else {
                             System.out.println("You entered an invalid temperature!");
