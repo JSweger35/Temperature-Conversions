@@ -11,6 +11,15 @@ public class Temperature
     private double degreesCelsius; // Celsius temperature
     private double degreesKelvin; // Kelvin temperature
 
+    public static boolean isTypeValid(String temperatureType) {
+        if (temperatureType.equalsIgnoreCase("C") ||
+        temperatureType.equalsIgnoreCase("F") ||
+        temperatureType.equalsIgnoreCase("K"))
+            return true;
+        else
+            return false;
+    }
+
     /**
      * This constructor for Temperature sets the temperature
      * values to the value in degrees, based on type
