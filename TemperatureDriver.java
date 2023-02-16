@@ -64,31 +64,38 @@ public class TemperatureDriver {
                         keyInput.next();
                     }
                 } while ( ! goodTemperature);
-                t1 = new Temperature(temperatureType, inputTemperature);
 
-                if (temperatureType.equalsIgnoreCase("F")) {
-                    System.out.println("You entered " + inputTemperature + 
-                        " degrees Fahrenheit");
-                    System.out.println("which is " + t1.getDegreesCelsius() + 
-                        " degrees Celsius"); 
-                    System.out.println("and " + t1.getDegreesKelvin() + 
-                        " degrees Kelvin.");
-                }
-                else if (temperatureType.equalsIgnoreCase("C")) {
-                    System.out.println("You entered " + inputTemperature + 
-                        " degrees Celsius");
-                    System.out.println("which is " + t1.getDegreesFahrenheit() + 
-                        " degrees Fahrenheit"); 
-                    System.out.println("and " + t1.getDegreesKelvin() + 
-                        " degrees Kelvin.");
-                }
-                else if (temperatureType.equalsIgnoreCase("K")) {
-                    System.out.println("You entered " + inputTemperature + 
-                        " degrees Kelvin");
-                    System.out.println("which is " + t1.getDegreesCelsius() + 
-                        " degrees Celsius"); 
-                    System.out.println("and " + t1.getDegreesFahrenheit() + 
-                        " degrees Fahrenheit.");
+                try{
+                    t1 = new Temperature(temperatureType, inputTemperature);
+
+                    if (temperatureType.equalsIgnoreCase("F")) {
+                        System.out.println("You entered " + inputTemperature + 
+                            " degrees Fahrenheit");
+                        System.out.println("which is " + t1.getDegreesCelsius() + 
+                            " degrees Celsius"); 
+                        System.out.println("and " + t1.getDegreesKelvin() + 
+                            " degrees Kelvin.");
+                    }
+                    else if (temperatureType.equalsIgnoreCase("C")) {
+                        System.out.println("You entered " + inputTemperature + 
+                            " degrees Celsius");
+                        System.out.println("which is " + t1.getDegreesFahrenheit() + 
+                            " degrees Fahrenheit"); 
+                        System.out.println("and " + t1.getDegreesKelvin() + 
+                            " degrees Kelvin.");
+                    }
+                    else if (temperatureType.equalsIgnoreCase("K")) {
+                        System.out.println("You entered " + inputTemperature + 
+                            " degrees Kelvin");
+                        System.out.println("which is " + t1.getDegreesCelsius() + 
+                            " degrees Celsius"); 
+                        System.out.println("and " + t1.getDegreesFahrenheit() + 
+                            " degrees Fahrenheit.");
+                    }
+                }            
+                catch (InvalidTemperatureTypeException e) {
+                    System.err.println(e);
+                    System.exit(1);
                 }
             }
         }
