@@ -35,8 +35,12 @@ public class Temperature
      * 
      * @param type temperature scale to use
      * @param degrees degrees Fahrenheit
+     * @throws InvalidTemperatureTypeException if type is not C, F, or K
      */
-    public Temperature(String type, double degrees) {
+    public Temperature(String type, double degrees) 
+    throws InvalidTemperatureTypeException {
+        if ( ! isTypeValid(type) )
+            throw new InvalidTemperatureTypeException(type + " is not a valid type.");
         if (type.equalsIgnoreCase("C"))
             setDegreesCelsius(degrees);
         else if (type.equalsIgnoreCase("F"))
